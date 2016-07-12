@@ -127,7 +127,7 @@ def manage_instances(region):
   # AWS is case sensitive, so check for the common cases manually
   filters = { 'tag-key': ['Schedule', 'schedule'], 'instance-state-name': ['running', 'stopped'] }
   scheduled_instances = ec2.get_only_instances(filters=filters)
-  parsed_instances = parse_instances(ec2)
+  parsed_instances = parse_instances(scheduled_instances)
 
   base = datetime.now()
   base = base.replace(second=0, microsecond=0)
