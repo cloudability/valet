@@ -1,3 +1,7 @@
 Release 1.0 Current Development
 
   * Initial release
+
+Release 1.1
+
+  * Issue #1 - Pass list of instances for parsing instead of ec2 client
